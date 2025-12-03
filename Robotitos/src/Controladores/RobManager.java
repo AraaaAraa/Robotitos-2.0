@@ -13,8 +13,8 @@ import Modelos.Domesticos;
 import Modelos.Industriales;
 
 // Para JSON (requiere librería externa como Gson)
- import com.google.gson.Gson; 
- import com.google.gson.GsonBuilder;
+import com.google.gson.Gson; 
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 // Para manejo de archivos (IO)
@@ -178,10 +178,10 @@ public class RobManager {
                 // Detalle específico (Polimorfismo con instanceof)
                 if (robot instanceof Domesticos) {
                     Domesticos d = (Domesticos) robot;
-                    linea += "Tareas Domesticas: " + d.getTareasDomesticas();
+                    linea += "Tareas Domesticas: " + d.getTareas();
                 } else if (robot instanceof Industriales) {
                     Industriales i = (Industriales) robot;
-                    linea += "Capacidad Max (kg): " + i.getCapacidadMax();
+                    linea += "Capacidad Max (kg): " + i.getCapacidadKg();
                 }
                 
                 bw.write(linea);

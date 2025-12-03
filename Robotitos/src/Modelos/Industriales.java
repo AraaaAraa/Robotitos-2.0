@@ -21,7 +21,3 @@ public class Industriales extends RobGeneral {
         return "Industrial";
     }
 }
-    
-    
-   
-   

@@ -141,7 +141,7 @@ public class VentanaPrincipalController implements Initializable {
     // =========================================================================
     // Método de Utilidad para Alertas
     // =========================================================================
-    private void mostrarAlerta(AlertType tipo, String titulo, String mensaje) {
+    public static void mostrarAlerta(AlertType tipo, String titulo, String mensaje) { 
         Alert alert = new Alert(tipo);
         alert.setTitle(titulo);
         alert.setHeaderText(null);

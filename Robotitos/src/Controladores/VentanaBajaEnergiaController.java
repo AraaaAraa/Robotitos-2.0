@@ -41,15 +41,15 @@ public class VentanaBajaEnergiaController implements Initializable {
     private void handleExportarCSV() {
         String nombreArchivo = "RobotsBajaEnergia.csv";
         try {
-            // Llama al método de exportación del manager
             manager.exportarBajaEnergiaCSV(nombreArchivo);
             
-            mostrarAlerta(AlertType.INFORMATION, "Exportación Exitosa", 
+            // LLAMADA CORREGIDA: Usando el nombre de la clase
+            VentanaPrincipalController.mostrarAlerta(AlertType.INFORMATION, "Exportación Exitosa", 
                     "Robots con baja energía exportados a " + nombreArchivo);
             
         } catch (IOException e) {
-            // Muestra el error de archivo al usuario
-            mostrarAlerta(AlertType.ERROR, "Error de Archivo", 
+            // LLAMADA CORREGIDA: Usando el nombre de la clase
+            VentanaPrincipalController.mostrarAlerta(AlertType.ERROR, "Error de Archivo", 
                     "No se pudo guardar el archivo CSV: " + e.getMessage());
         }
     }
